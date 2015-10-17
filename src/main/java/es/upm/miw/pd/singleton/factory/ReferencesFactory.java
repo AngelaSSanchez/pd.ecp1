@@ -7,12 +7,18 @@ public class ReferencesFactory {
     private Map<String, Integer> references;
 
     private int reference;
+    
+    private static ReferencesFactory referencefactory = new ReferencesFactory();
 
-    public ReferencesFactory() {
+    private ReferencesFactory() {
         this.references = new HashMap<>();
         this.reference = 0;
     }
 
+    public static ReferencesFactory getFactory(){
+    	return referencefactory;
+    }
+    
     public int getReference(String key) {
         Integer result = this.references.get(key);
         if (result == null) {

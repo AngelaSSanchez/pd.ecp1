@@ -7,23 +7,9 @@ public class Numero extends Expresion{
 	public Numero(int numero){
 		this.numero = numero;
 	}
-	
-	@Override
-	public void add(Expresion exp) {
-		throw new UnsupportedOperationException("Operación no permitida");
-	}
 
 	@Override
-	public void remove(Expresion exp) {
-	}
-
-	@Override
-	public boolean isComposite() {
-		return false;
-	}
-
-	@Override
-	public int operate() {
+	public int operar() {
 		return this.numero;
 	}
 

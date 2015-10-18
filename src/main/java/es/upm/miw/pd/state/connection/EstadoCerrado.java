@@ -2,10 +2,8 @@ package es.upm.miw.pd.state.connection;
 
 public class EstadoCerrado extends EstadoConexion{
 	
-	private Estado estado;
-
-	public EstadoCerrado(){
-		this.estado = Estado.CERRADO;
+	public Estado getEstado(){
+		return Estado.CERRADO;
 	}
 	
 	public void cerrar(Conexion conexion){

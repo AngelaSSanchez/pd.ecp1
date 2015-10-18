@@ -7,6 +7,7 @@ public class EstadoEsperando extends EstadoConexion{
 	}
 	
 	public void recibir(Conexion conexion, int respuesta){
+		conexion.getLink().recibir(respuesta);
         if (respuesta == 0) {
             conexion.setEstado(new EstadoPreparado()); 
         } else {

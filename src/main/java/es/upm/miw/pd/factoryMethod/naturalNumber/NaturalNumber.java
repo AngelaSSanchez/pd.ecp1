@@ -22,13 +22,9 @@ public abstract class NaturalNumber {
     public void add(int value) {
         this.setValue(this.value + value);
     }
-   
-    public String[] getTextValues(){
-    	return this.getTextValues();
-    }
     
-    public void setTextValues(){
-    	this.textValue = this.getTextValues();
+    public void setTextValues(String[] textValue){
+    	this.textValue = textValue;
     }
         
     public String getTextValue() {

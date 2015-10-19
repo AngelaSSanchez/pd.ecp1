@@ -8,15 +8,14 @@ public class Circle extends Figure {
         super(description);
         this.radius = radius;
     }
-
-    @Override
-    public double area() {
-        return Math.PI * radius * radius;
+    
+    public double getRadius(){
+    	return this.radius;
     }
 
-    @Override
-    public double numberOfSides() {
-        return Double.POSITIVE_INFINITY;
-    }
+	@Override
+	public void accept(Visitor visitor) {
+		visitor.visitCircle(this);
+	}
 
 }

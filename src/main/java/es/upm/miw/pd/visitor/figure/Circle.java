@@ -6,11 +6,15 @@ public class Circle extends Figure {
 
     public Circle(String description, double radius) {
         super(description);
-        this.radius = radius;
+        this.setRadius(radius);;
     }
     
     public double getRadius(){
     	return this.radius;
+    }
+    
+    public void setRadius(double radius){
+    	this.radius = radius;
     }
 
 	@Override

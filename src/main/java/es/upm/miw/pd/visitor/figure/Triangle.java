@@ -7,8 +7,8 @@ public class Triangle extends Figure {
 
     public Triangle(String description, double base, double height) {
         super(description);
-        this.base = base;
-        this.height = height;
+        this.setBase(base);;
+        this.setHeight(height);
     }
 
     public double getBase(){
@@ -17,6 +17,14 @@ public class Triangle extends Figure {
     
     public double getHeight(){
     	return this.height;
+    }
+    
+    public void setBase(double base){
+    	this.base = base;
+    }
+    
+    public void setHeight(double height){
+    	this.height = height;
     }
 
     @Override

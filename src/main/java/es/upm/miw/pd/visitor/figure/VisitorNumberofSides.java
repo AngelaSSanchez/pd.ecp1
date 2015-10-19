@@ -6,17 +6,17 @@ public class VisitorNumberofSides extends Visitor{
 	
 	@Override
 	public void visitCircle(Circle circle) {
-		this.numofsides = Double.POSITIVE_INFINITY;
+		this.numofsides += Double.POSITIVE_INFINITY;
 	}
 
 	@Override
 	public void visitSquare(Square square) {
-		this.numofsides = 4;
+		this.numofsides += 4;
 	}
 
 	@Override
 	public void visitTriangle(Triangle triangle) {
-		this.numofsides = 3;
+		this.numofsides += 3;
 	}
 
 	public double getNumofSides(){

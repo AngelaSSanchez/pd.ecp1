@@ -6,17 +6,17 @@ public class VisitorArea extends Visitor{
 	
 	@Override
 	public void visitCircle(Circle circle) {
-		this.area = Math.PI * circle.getRadius() * circle.getRadius();
+		this.area += Math.PI * circle.getRadius() * circle.getRadius();
 	}
 
 	@Override
 	public void visitSquare(Square square) {
-		this.area = square.getSide() * square.getSide();
+		this.area += square.getSide() * square.getSide();
 	}
 
 	@Override
 	public void visitTriangle(Triangle triangle) {
-		this.area = triangle.getBase() * triangle.getHeight() * 0.5;
+		this.area += triangle.getBase() * triangle.getHeight() * 0.5;
 	}
 	
 	public double getArea(){

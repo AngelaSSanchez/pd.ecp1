@@ -3,6 +3,8 @@ package es.upm.miw.pd.visitor.figure;
 import java.util.ArrayList;
 import java.util.List;
 
+import upm.jbb.IO;
+
 public class FiguresManager {
 
     private List<Figure> figures;
@@ -15,20 +17,22 @@ public class FiguresManager {
         figures.add(figure);
     }
 
-    public double totalArea() {
-        double result = 0;
+    public void visitador1() {
+        VisitorArea v1 = new VisitorArea();
         for (Figure figure : figures) {
-            result += figure.area();
+        	figure.accept(v1);
         }
-        return result;
+    }
+    
+    public void visitador2(){
+    	VisitorNumberofSides v2 = new VisitorNumberofSides();
+    	for (Figure figure : figures) {
+    		figure.accept(v2);
+    	}
     }
 
-    public double totalNumberOfSides() {
-        double result = 0;
-        for (Figure figure : figures) {
-            result += figure.numberOfSides();
-        }
-        return result;
+    public static void main(String[] args) {
+        IO.getIO().addView(new FiguresManager());
     }
 
 }

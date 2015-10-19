@@ -6,11 +6,15 @@ public class Square extends Figure {
 
     public Square(String description, double side) {
         super(description);
-        this.side = side;
+        this.setSide(side);
     }
 
     public double getSide(){
     	return this.side;
+    }
+    
+    public void setSide(double side){
+    	this.side = side;
     }
 
     @Override

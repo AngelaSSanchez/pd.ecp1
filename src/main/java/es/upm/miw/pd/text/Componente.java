@@ -2,14 +2,10 @@ package es.upm.miw.pd.text;
 
 public abstract class Componente {
 
-	public void add(Componente h) {
-		// TODO Auto-generated method stub
-		
-	}
+	public abstract void add(Componente h) throws UnsupportedOperationException;
 
-	public Object dibujar(boolean b) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	public abstract String dibujar(boolean b);
+	
+	public abstract boolean isComposite();
 
 }

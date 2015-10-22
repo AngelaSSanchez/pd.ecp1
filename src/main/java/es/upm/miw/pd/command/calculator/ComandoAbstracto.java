@@ -8,6 +8,10 @@ public abstract class ComandoAbstracto implements Comando{
 		this.calculator = calculator;
 	}
 	
+	public Calculator getCalculator(){
+		return this.calculator;
+	}
+	
 	public void execute(){}
 	
 }

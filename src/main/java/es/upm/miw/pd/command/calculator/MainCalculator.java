@@ -16,6 +16,8 @@ public class MainCalculator {
         this.commandManager.add(new SubtractCommand(calculator));
         this.commandManager.add(new ResetCommand(calculator));
         this.commandManager.add(new PrintCommand(calculator));
+        this.commandManager.add(new SaveCommand(calculator));
+        this.commandManager.add(new UndoCommand(calculator));
     }
 
     public void execute() {

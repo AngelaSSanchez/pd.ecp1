@@ -1,7 +1,8 @@
 package es.upm.miw.pd.command.calculator;
 
-public class Calculator {
+public class Calculator implements CalculatorMementable{
     private int total;
+    MementoCalculator memento;
 
     public Calculator() {
         this.reset();
@@ -26,4 +27,16 @@ public class Calculator {
     public void reset() {
         this.setTotal(0);
     }
+    
+    @Override
+    public void save() {
+    	this.memento = new MementoCalculator(this.getTotal());
+	}
+
+    @Override
+	public void undo() {
+    	this.total = this.memento.getTotal();
+	}
+
+
 }

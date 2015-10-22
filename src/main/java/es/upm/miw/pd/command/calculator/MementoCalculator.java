@@ -11,4 +11,5 @@ public class MementoCalculator {
 	public int getTotal(){
 		return this.value;
 	}
+	
 }

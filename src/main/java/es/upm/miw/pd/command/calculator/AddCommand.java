@@ -13,8 +13,6 @@ public class AddCommand extends ComandoAbstracto {
 		return "Sumar";
 	}
 	
-
-	
 	@Override
 	public void execute(){
 		int numero = (int) IO.getIO().readInt();

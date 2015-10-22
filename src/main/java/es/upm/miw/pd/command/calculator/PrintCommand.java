@@ -1,9 +1,21 @@
 package es.upm.miw.pd.command.calculator;
 
-public class PrintCommand extends Comando {
+import upm.jbb.IO;
+
+public class PrintCommand extends ComandoAbstracto {
 
 	public PrintCommand(Calculator calculator) {
-		// TODO Auto-generated constructor stub
+		super(calculator);
+	}
+
+	@Override
+	public String name() {
+		return "Total";
+	}
+	
+	@Override
+	public void execute(){
+		IO.getIO().println(this.getCalculator().getTotal());
 	}
 
 }

@@ -1,9 +1,19 @@
 package es.upm.miw.pd.command.calculator;
 
-public class ResetCommand extends Comando {
+public class ResetCommand extends ComandoAbstracto {
 
 	public ResetCommand(Calculator calculator) {
-		// TODO Auto-generated constructor stub
+		super(calculator);
+	}
+
+	@Override
+	public String name() {
+		return "Reset";
+	}
+	
+	@Override
+	public void execute(){
+		this.getCalculator().reset();
 	}
 
 }

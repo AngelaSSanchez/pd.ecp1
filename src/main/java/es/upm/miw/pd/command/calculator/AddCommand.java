@@ -1,9 +1,24 @@
 package es.upm.miw.pd.command.calculator;
 
-public class AddCommand extends Comando {
+import upm.jbb.IO;
+
+public class AddCommand extends ComandoAbstracto {
 
 	public AddCommand(Calculator calculator) {
-		// TODO Auto-generated constructor stub
+		super(calculator);
+	}
+
+	@Override
+	public String name() {
+		return "Sumar";
+	}
+	
+
+	
+	@Override
+	public void execute(){
+		int numero = (int) IO.getIO().readInt();
+		this.getCalculator().add(numero);
 	}
 
 }
